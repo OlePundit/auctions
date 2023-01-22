@@ -34,6 +34,11 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
+                    @if (Auth::user())
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="/garage/{{ Auth::user()->id }}">My Garage</a>
+                    </div>                   
+                    @endif  
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest

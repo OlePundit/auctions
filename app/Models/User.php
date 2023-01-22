@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Str;
 
 class User extends \TCG\Voyager\Models\User
 {
@@ -41,8 +42,31 @@ class User extends \TCG\Voyager\Models\User
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function products()
+
+    protected static function boot()
     {
-        return $this->hasMany(Auction::class)->latest();;
+        parent::boot();
+        static::created(function ($user){
+            $user->garage()->create();
+        });
+        static::saving(function ($user) {
+            $user->slug = Str::slug($user->name);
+        });
     }
+
+    public function auctions()
+    {
+        return $this->hasMany(Auctions::class)->latest();
+    }
+
+    public function bids()
+    {
+        return $this->hasMany(Bid::class)->latest();
+    }
+
+    public function garage()
+    {
+        return $this->hasOne(Garage::class);
+    }
+    
 }

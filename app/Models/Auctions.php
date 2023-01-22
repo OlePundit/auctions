@@ -18,5 +18,10 @@ class Auctions extends Model
     {
     return $this->belongsTo(User::class);
     }
+    public function bids()
+    {
+        return $this->hasMany(Bid::class, 'auction_id', 'id')->latest();
+    }
+
     
 }
