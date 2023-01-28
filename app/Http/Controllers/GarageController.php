@@ -21,9 +21,11 @@ class GarageController extends Controller
             function()  use ($user){
                 return $user->bids->count();
             });
+        $auctions = auth()->user()->bids()->pluck('bids.auction_id'); 
+        $activeBids = Auctions::whereIn('id', $auctions)->latest()->get(); 
 
-        $activeBids = $user->bids->auctions();    
-        return view('Garage.index', compact('user','bidCount','activeBids'));    
+           
+        return view('Garage.index', compact('user','bidCount', 'activeBids'));    
     }
 
     public function edit(User $user, Garage $garage)

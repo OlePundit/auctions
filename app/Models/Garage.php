@@ -12,7 +12,8 @@ class Garage extends Model
    
     public function garageImage()
     {
-        $imagePath = ($this->image) ? $this->image: 'shop/garage.svg';
+        $imagePath = ($this->image) ? $this->image: 'garage/car-front.svg';
+        return '/storage/' . $imagePath;
     }
 
     public function user()
