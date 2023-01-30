@@ -12,7 +12,9 @@ class AuctionsController extends Controller
     {
         $auctions = Auctions::all();
 
-        return view('Auctions.index', compact('auctions'));
+        $closedauctions = Auctions::where('status', 'closed')->get(); 
+
+        return view('Auctions.index', compact('auctions', 'closedauctions'));
     }
 
     public function show(\App\Models\Auctions $slug)

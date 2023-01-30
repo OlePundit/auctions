@@ -1,0 +1,117 @@
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0; /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 240px;
+    z-index: 600;
+  }
+  
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+
+  .offer-text{
+    color: #fff;
+  }
+
+.box{
+   
+    display: inline-block;    
+    background-color: #fff;
+    position: relative;/* Make the width of box same as image */
+}
+.box::before,
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.box::before {
+    border-width: 1em;
+    border-right-color: #ccc;
+    border-top-color: #ccc;
+}
+
+.box::after {
+    border-radius: 0.4em;
+    border-width: 6em;
+    border-right-color: #0c0;
+    border-top-color: #0c0;
+    opacity: 0.6;
+}
+
+.box .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0;
+    left: 100px;
+    right: 0;
+    top: 20%; /* Adjust this value to move the positioned div up and down */
+    text-align: start;
+    width: 50%; /* Set the width of the positioned div */  
+    font-size: 20px; 
+    transform:  rotate(45deg);  
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .box .text{
+        position: absolute;
+        z-index: 999;
+        margin: 0;
+        left: 220px;
+        right: 0;
+        top: 30%; /* Adjust this value to move the positioned div up and down */
+        text-align: start;
+        width: 50%; /* Set the width of the positioned div */  
+        font-size: 20px; 
+        transform:  rotate(45deg);  
+        color: #fff;
+    }
+  }
+
+  @media (max-width: 1300.98px) {
+    .box .text{
+        position: absolute;
+        z-index: 999;
+        margin: 0;
+        left: 70px;
+        right: 0;
+        top: 20%; /* Adjust this value to move the positioned div up and down */
+        text-align: start;
+        max-width: 50%; /* Set the width of the positioned div */  
+        font-size: 20px; 
+        transform:  rotate(45deg);  
+        color: #fff;
+    }
+    .box::after {
+        border-radius: 0.4em;
+        border-width: 5em;
+        border-right-color: #0c0;
+        border-top-color: #0c0;
+        opacity: 0.6;
+    }
+  }

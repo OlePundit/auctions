@@ -23,11 +23,7 @@
             <p>{{$slug->yom}}</p>  
             <p>{{$slug->status}}</p>  
             <p>{{$slug->condtion}}</p> 
-            <div>                 
-                <a href="/bid/create" class="link mx-1 mt-2">
-                <button type="button" class="btn btn-primary">Bid</button>
-                </a>                          
-            </div>         
+                   
                 
         </div>
         <div class="col-4 ">
