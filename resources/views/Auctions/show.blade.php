@@ -48,7 +48,7 @@
                     
 
                     @empty
-                        <h6>No comments yet</h6>
+                        <h6>No bids yet</h6>
                     @endforelse
                     <form action = "/bid" enctype="multipart/form-data" method="post">
                         @csrf           
