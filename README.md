@@ -1,11 +1,9 @@
 <h1>Auctions</h1>
 <h2>
-SellorBuyKe is an open-source ecommerce and social media app built using Laravel, Vue.js, HTML, CSS and Bootstrap.
+Auctions is an open-source ecommerce app built using Laravel, HTML, CSS and Bootstrap.
 </h2>
 <p>
-SellorbuyKe is an app that attempts to open source the ability to connect to an online audience, primarily to small business owners. Small scale retailers from different lines of business can create an online shop, upload their products, and advertise to a wider online audience, for free. 
-    
-Our aim is to eliminate brick and mortar costs by providing sellers with the ability to sell from anywhere, anytime, and customers can connect to retailers in their location around the clock, ulimately raising consumer satisfaction, by enhancing service delivery through solving issues such as last mile delivery and customer experience.
+Auctions is an app that enables customers within the automotive space to bid on salvage cars, spare parts and second hand cars.
     
 Here is a test version of the application: (https://sellorbuyke.com)
 </p>
