@@ -1,66 +1,106 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<h1>Auctions</h1>
+<h2>
+SellorBuyKe is an open-source ecommerce and social media app built using Laravel, Vue.js, HTML, CSS and Bootstrap.
+</h2>
+<p>
+SellorbuyKe is an app that attempts to open source the ability to connect to an online audience, primarily to small business owners. Small scale retailers from different lines of business can create an online shop, upload their products, and advertise to a wider online audience, for free. 
+    
+Our aim is to eliminate brick and mortar costs by providing sellers with the ability to sell from anywhere, anytime, and customers can connect to retailers in their location around the clock, ulimately raising consumer satisfaction, by enhancing service delivery through solving issues such as last mile delivery and customer experience.
+    
+Here is a test version of the application: (https://sellorbuyke.com)
 </p>
+<h3>Requirements</h3>
 
-## About Laravel
+- PHP 7.3+
+- Laravel 5.5+
+- NPM
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h3> Tech Stack</h3>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![HTML](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
+![JS](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![LARAVEL](https://img.shields.io/badge/laravel%20-%23e62d15.svg?&style=for-the-badge&logo=laravel&logoColor=%23FFFFFF)
+<img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"/>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<h3>Configuration and Installation</h3>
 
-## Learning Laravel
+1. Fork the repository 
+    
+2. Clone the forked repository using:
+ 
+ 
+```shell
+git clone https://github.com/OlePundit/Soko.git
+```
+            
+3. Install composer
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```
+Composer Install
+```
+            
+  
+4. Composer will install all the dependencies
+5. Edit the env file to ensure that Database connection is set to sqlite
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```
+DB_CONNECTION=sqlite
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+6. If you are a windows user, install vim from (https://vim.org), and set up the local database using:
 
-## Laravel Sponsors
+```
+vim database/database.sqlite
+```
+            
+7. Finally run 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+php artisan migrate
 
-### Premium Partners
+```
+            
+To set up the migrations.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+8. You might also want to run
+  
+```
+php artisan storage:link 
+```
+            
+To set up a symbolic link between public storage and local storage.
+ 
+9. For Windows users:
+<br>
+Go to php folder in xampp and open the php.ini and php configurations settings file, and change the line ';extension=gd2' or the line ';extension=gd' to just 'extension=gd2'
 
-## Contributing
+NB that php version 8 is stored as ;extension=gd
+  
+Linux/ Mac users:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+sudo apt-get install php8.1-gd
+```
 
-## Code of Conduct
+Depending on the php installation
+ 
+The app should now be ready to go!⚡
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+<h3>Lead Maintainer</h3>
+<table>
+  <tbody><tr>
+     <td align="center"><a href="https://github.com/OlePundit"><img alt="" src="https://avatars.githubusercontent.com/u/104025672?s=400&v=4" width="125px;"><br><sub><b> OlePundit </b></sub></a><br></td> </a></td>
+</tbody></table>
+<a href="https://twitter.com/OlePundit">
+    <img alt="twitter" src="https://img.shields.io/badge/twitter-%2300acee .svg?style=for-the-badge&logo=twitter&logoColor=white"/>
+</a>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<a href="https://twitter.com/OlePundit">
+    <img alt="github" src="https://img.shields.io/badge/github-%23323330.svg?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<a href="https://twitter.com/OlePundit](https://www.linkedin.com/in/glenn-omondi-390393140/">
+    <img alt="linkedin" src="https://img.shields.io/badge/linkedin-%230072b1 .svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
